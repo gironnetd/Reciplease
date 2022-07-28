@@ -12,11 +12,15 @@ class SearchViewController: UIViewController {
     @IBOutlet private weak var ingredientTextField: UITextField!
     @IBOutlet private weak var ingredientsTableView: UITableView!
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
     private var ingredients: [String] = [] {
         didSet {
             ingredientsTableView.reloadData()
         }
     }
+    
+    private let segueIdentifier: String = "RecipesSegue"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +46,32 @@ class SearchViewController: UIViewController {
         }
     }
     
+    @IBAction func searchRecipes(_ sender: Any) {
+        activityIndicator.startAnimating()
+        SearchService.shared.retrieveRecipes(ingredients: ingredients, callBack: { [self] recipes, error in
+            if let recipes = recipes {
+                activityIndicator.stopAnimating()
+                guard !recipes.isEmpty else {
+                    presentAlertViewController(title: "No recipes found",
+                        message: "Sorry but we couldn't find any recipes matching the ingredients you entered.")
+                    return
+                }
+                performSegue(withIdentifier: segueIdentifier, sender: recipes)
+            }
+            
+            if let error = error {
+                activityIndicator.stopAnimating()
+                presentAlertViewController(title: error.rawValue.title!, message: error.rawValue.message!)
+            }
+        })
+    }
+    
+    private func presentAlertViewController(title: String, message: String) {
+        let alertViewController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alertViewController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alertViewController, animated: true, completion: nil)
+    }
+    
     @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
         clearIngredientTextField()
     }
@@ -49,6 +79,18 @@ class SearchViewController: UIViewController {
     private func clearIngredientTextField() {
         ingredientTextField.resignFirstResponder()
         ingredientTextField.text = ""
+    }
+    
+    // MARK: - Navigation
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if  segue.identifier == segueIdentifier,
+            let destination = segue.destination as? RecipesTableViewController
+        {
+            if ((sender.self as? [Recipe]) != nil) {
+                destination.recipes = sender as! [Recipe]
+            }
+        }
     }
 }
 

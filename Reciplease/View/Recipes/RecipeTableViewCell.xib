@@ -3,7 +3,6 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
-        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -51,70 +50,9 @@
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j3p-wd-wnD">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j3p-wd-wnD" customClass="Informations" customModule="Reciplease" customModuleProvider="target">
                         <rect key="frame" x="232" y="10" width="78" height="61"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sH5-Rb-Jt0">
-                                <rect key="frame" x="2" y="2" width="74" height="57"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="F5v-wt-xm5">
-                                        <rect key="frame" x="4" y="4" width="41" height="49"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="0 cal " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyg-T4-KrU" userLabel="0 cal">
-                                                <rect key="frame" x="0.0" y="0.0" width="41" height="20.5"/>
-                                                <accessibility key="accessibilityConfiguration" hint="Number of calories of the recipe" label="Number of calories"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 m " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8uC-2s-X9Z">
-                                                <rect key="frame" x="0.0" y="28.5" width="41" height="20.5"/>
-                                                <accessibility key="accessibilityConfiguration" hint="Time to prepare the recipe" label="Time to prepare the recipe"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="RCF-IE-vvy">
-                                        <rect key="frame" x="49" y="4" width="21" height="49"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" image="hand.thumbsup.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="wL3-FI-Lin">
-                                                <rect key="frame" x="0.0" y="-0.5" width="21" height="21"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <accessibility key="accessibilityConfiguration" hint="Calories Icon" label="Calories Icon">
-                                                    <bool key="isElement" value="YES"/>
-                                                </accessibility>
-                                            </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="p3N-Ve-Zpk">
-                                                <rect key="frame" x="0.0" y="29.5" width="21" height="19"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <accessibility key="accessibilityConfiguration" hint="Time Icon" label="Time Icon">
-                                                    <bool key="isElement" value="YES"/>
-                                                </accessibility>
-                                            </imageView>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                                <color key="backgroundColor" red="0.32281640169999998" green="0.29296150799999998" blue="0.2899671197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstItem="RCF-IE-vvy" firstAttribute="top" secondItem="sH5-Rb-Jt0" secondAttribute="top" constant="4" id="9GR-WQ-4yU"/>
-                                    <constraint firstAttribute="bottom" secondItem="RCF-IE-vvy" secondAttribute="bottom" constant="4" id="PW7-r2-G7Q"/>
-                                    <constraint firstAttribute="trailing" secondItem="RCF-IE-vvy" secondAttribute="trailing" constant="4" id="RvX-6z-Cza"/>
-                                    <constraint firstAttribute="bottom" secondItem="F5v-wt-xm5" secondAttribute="bottom" constant="4" id="SeV-Wc-L9W"/>
-                                    <constraint firstItem="RCF-IE-vvy" firstAttribute="leading" secondItem="F5v-wt-xm5" secondAttribute="trailing" constant="4" id="Tbz-wl-HWw"/>
-                                    <constraint firstItem="F5v-wt-xm5" firstAttribute="top" secondItem="sH5-Rb-Jt0" secondAttribute="top" constant="4" id="VHu-5Q-qRw"/>
-                                    <constraint firstItem="F5v-wt-xm5" firstAttribute="leading" secondItem="sH5-Rb-Jt0" secondAttribute="leading" constant="4" id="oMd-JL-3cg"/>
-                                </constraints>
-                            </view>
-                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="sH5-Rb-Jt0" secondAttribute="trailing" constant="2" id="8oT-Qp-kQJ"/>
-                            <constraint firstItem="sH5-Rb-Jt0" firstAttribute="top" secondItem="j3p-wd-wnD" secondAttribute="top" constant="2" id="HfD-7g-S2f"/>
-                            <constraint firstItem="sH5-Rb-Jt0" firstAttribute="leading" secondItem="j3p-wd-wnD" secondAttribute="leading" constant="2" id="P2d-aq-5Ll"/>
-                            <constraint firstAttribute="bottom" secondItem="sH5-Rb-Jt0" secondAttribute="bottom" constant="2" id="xdv-Dw-Wtt"/>
-                        </constraints>
                     </view>
                 </subviews>
                 <constraints>
@@ -138,19 +76,15 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="calories" destination="dyg-T4-KrU" id="Qcm-Wn-3Qk"/>
-                <outlet property="caloriesImage" destination="wL3-FI-Lin" id="rnr-G9-gmX"/>
+                <outlet property="informations" destination="j3p-wd-wnD" id="dAD-Sh-g4W"/>
                 <outlet property="ingredients" destination="HPN-kb-Zfr" id="HaL-i4-XVj"/>
                 <outlet property="recipeImage" destination="AC2-Ki-dHs" id="TNV-Bn-pll"/>
-                <outlet property="time" destination="8uC-2s-X9Z" id="TQ0-sd-ozh"/>
                 <outlet property="title" destination="IwR-Hs-hRQ" id="4uf-6t-PGe"/>
             </connections>
             <point key="canvasLocation" x="-317.39130434782612" y="76.004464285714278"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="clock" catalog="system" width="128" height="121"/>
-        <image name="hand.thumbsup.fill" catalog="system" width="128" height="121"/>
         <image name="recipe-default" width="300" height="157.5"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

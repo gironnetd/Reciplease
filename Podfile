@@ -12,6 +12,7 @@ target 'Reciplease' do
   target 'RecipleaseTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'Mocker', '~> 2.5.4'
   end
 
   target 'RecipleaseUITests' do

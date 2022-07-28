@@ -48,7 +48,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qb2-Sy-1AU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-369" y="62"/>
+            <point key="canvasLocation" x="-449" y="63"/>
         </scene>
         <!--Reciplease-->
         <scene sceneID="Otf-9N-fFK">
@@ -214,14 +214,20 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="kuA-Sf-T2Q" kind="show" id="2yY-Dm-HCj"/>
+                                    <action selector="searchRecipes:" destination="xrg-p8-qgy" eventType="touchUpInside" id="usT-kg-YPT"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="LVn-j1-B1c">
+                                <rect key="frame" x="204" y="367.66666666666669" width="20" height="20"/>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HF9-Js-i2w"/>
                         <color key="backgroundColor" red="0.32281640169999998" green="0.29296150799999998" blue="0.2899671197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="LVn-j1-B1c" firstAttribute="centerY" secondItem="QTu-O0-YHC" secondAttribute="centerY" id="2z7-eB-N4F"/>
                             <constraint firstItem="wGE-bE-eZ6" firstAttribute="top" secondItem="uwO-4V-ABQ" secondAttribute="bottom" constant="16" id="9RK-Cf-e3b"/>
+                            <constraint firstItem="LVn-j1-B1c" firstAttribute="centerX" secondItem="QTu-O0-YHC" secondAttribute="centerX" id="CkO-D6-y5e"/>
                             <constraint firstItem="HF9-Js-i2w" firstAttribute="bottom" secondItem="wGE-bE-eZ6" secondAttribute="bottom" constant="20" id="KS0-bd-soP"/>
                             <constraint firstItem="kBO-lJ-8gU" firstAttribute="top" secondItem="HF9-Js-i2w" secondAttribute="top" id="LMl-zp-jSc"/>
                             <constraint firstItem="HF9-Js-i2w" firstAttribute="trailing" secondItem="uwO-4V-ABQ" secondAttribute="trailing" constant="20" id="VPk-MQ-szr"/>
@@ -243,8 +249,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="activityIndicator" destination="LVn-j1-B1c" id="oUK-lE-VzF"/>
                         <outlet property="ingredientTextField" destination="qM0-bI-abV" id="6wg-jh-GpL"/>
                         <outlet property="ingredientsTableView" destination="uwO-4V-ABQ" id="Px0-aE-Ec9"/>
+                        <segue destination="kuA-Sf-T2Q" kind="show" identifier="RecipesSegue" id="ltW-t6-dTb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vad-SP-kGa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

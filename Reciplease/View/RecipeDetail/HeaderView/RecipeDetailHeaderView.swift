@@ -12,9 +12,9 @@ import UIKit
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var recipeImage: UIImageView!
     @IBOutlet weak var recipeTitle: UILabel!
-    @IBOutlet weak var calories: UILabel!
-    @IBOutlet weak var time: UILabel!
-    @IBOutlet weak var caloriesImage: UIImageView!
+    @IBOutlet weak var informations: Informations!
+    
+    public var recipe: Recipe?
     
     override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
@@ -40,8 +40,22 @@ import UIKit
         
         recipeTitle.isAccessibilityElement = true
         recipeImage.isAccessibilityElement = true
-        calories.isAccessibilityElement = true
-        time.isAccessibilityElement = true
-        caloriesImage.isAccessibilityElement = true
+    }
+    
+    public func populateHeaderView() {
+        updateTitle()
+        if let recipe = recipe, let recipeImage = recipe.recipeImage {
+            self.recipeImage.image = UIImage(data: recipeImage)
+            informations.recipe = recipe
+            informations.populateInformations()
+        }
+    }
+    
+    private func updateTitle() {
+        if let recipe = recipe {
+            recipeTitle.text = recipe.label.replacingOccurrences(of: "&amp;amp;", with: "&")
+            recipeTitle.accessibilityHint = recipeTitle.text
+            recipeTitle.accessibilityLabel = recipeTitle.text
+        }
     }
 }

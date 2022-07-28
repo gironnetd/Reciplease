@@ -28,46 +28,9 @@ class RecipeDetailViewController: UIViewController {
     }
     
     private func populateHeaderIngredientLines() {
-        if let recipe = recipe, let recipeImage = recipe.recipeImage {
-            recipeDetailheaderView.recipeImage.image = UIImage(data: recipeImage)
-            recipeDetailheaderView.recipeTitle.text = recipe.label.replacingOccurrences(of: "&amp;amp;", with: "&")
-            recipeDetailheaderView.recipeTitle.accessibilityHint = recipeDetailheaderView.recipeTitle.text
-            recipeDetailheaderView.recipeTitle.accessibilityLabel = recipeDetailheaderView.recipeTitle.text
-            
-            let formatter = NumberFormatter()
-            formatter.maximumFractionDigits = 1
-            
-            if recipe.calories >= 1000 {
-                recipeDetailheaderView.calories.text = "\(formatter.string(from: recipe.calories / 1000 as NSNumber) ?? String(0)) kcal "
-            } else {
-                recipeDetailheaderView.calories.text = "\(formatter.string(from: NSNumber(value: recipe.calories)) ?? String(0)) cal "
-            }
-            recipeDetailheaderView.calories.accessibilityHint = recipeDetailheaderView.calories.text
-            recipeDetailheaderView.calories.accessibilityLabel = recipeDetailheaderView.calories.text
-            
-            if recipe.calories > 1500 {
-                recipeDetailheaderView.caloriesImage.image = UIImage.init(systemName: "hand.thumbsdown.fill")
-                recipeDetailheaderView.calories.accessibilityHint = "the calorie count is over 1500 which means it is too high"
-                recipeDetailheaderView.calories.accessibilityLabel = "the calorie count is over 1500 which means it is too high"
-            } else {
-                recipeDetailheaderView.calories.accessibilityHint = "the calorie count is less than 1500 which means it remains correct"
-                recipeDetailheaderView.calories.accessibilityLabel = "the calorie count is less than 1500 which means it remains correct"
-            }
-            
-            let (hours, minutes) = ((recipe.totalTime / 60), (recipe.totalTime % 60))
-            if hours != 0 || minutes != 0 {
-                recipeDetailheaderView.time.text = ""
-                
-                if hours != 0 {
-                    recipeDetailheaderView.time.text?.append("\(hours) h ")
-                }
-                
-                if minutes != 0 {
-                    recipeDetailheaderView.time.text?.append("\(minutes) m")
-                }
-            }
-            recipeDetailheaderView.time.accessibilityHint = "the time to prepare the recipe is estimated to \(recipeDetailheaderView.time.text!)"
-            recipeDetailheaderView.time.accessibilityLabel = "the time to prepare the recipe is estimated to \(recipeDetailheaderView.time.text!)"
+        if let recipe = recipe {
+            recipeDetailheaderView.recipe = recipe
+            recipeDetailheaderView.populateHeaderView()
         }
     }
 
