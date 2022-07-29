@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "1EE9505B-FA84-430F-9AB4-4F0674861C8B"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E26A2B5B-15CB-491E-92AE-823FC82CA38C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RecipleaseTests/SearchServiceTestCase.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "test_GIVEN_Not_Nil_Request_WHEN_Retrieve_Data_THEN_Result_Is_Correct()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E26A2B5B-15CB-491E-92AE-823FC82CA38C - fd8e5ede646e9551"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RecipleaseTests.SearchServiceTestCase.test_GIVEN_Not_Nil_Request_WHEN_Retrieve_Data_THEN_Result_Is_Correct() throws -&gt; ()"
+                  moduleName = "RecipleaseTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/damien/Documents/OpenClassrooms/iOS/Dev_iOS_2022/Projet_10_Creez_l_application_Reciplease_pour_de_bons_petits_plats/Reciplease/RecipleaseTests/SearchServiceTestCase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "1311">
+               </Location>
+               <Location
+                  uuid = "E26A2B5B-15CB-491E-92AE-823FC82CA38C - f0a7710680481fb0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;Reciplease.Recipe&gt;&gt;, Swift.Optional&lt;Reciplease.NetworkError&gt;) -&gt; () in RecipleaseTests.SearchServiceTestCase.test_GIVEN_Not_Nil_Request_WHEN_Retrieve_Data_THEN_Result_Is_Correct() throws -&gt; ()"
+                  moduleName = "RecipleaseTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/damien/Documents/OpenClassrooms/iOS/Dev_iOS_2022/Projet_10_Creez_l_application_Reciplease_pour_de_bons_petits_plats/Reciplease/RecipleaseTests/SearchServiceTestCase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "380">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A14EFE86-B20D-4212-8AC7-062F6C2A429F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Reciplease/Model/Search/SearchService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "retrieveRecipes(ingredients:callBack:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4B8B029B-D365-469E-84D8-0D288BE3A07B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Reciplease/Model/Search/SearchService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "retrieveRecipes(ingredients:callBack:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C1A337D3-C612-433B-B79B-75FE3DCDAC0B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Reciplease/Model/Search/SearchService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "retrieveRecipes(ingredients:callBack:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DB0362BB-1AD8-462F-B4BD-A6005E747C3F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RecipleaseTests/SearchServiceTestCase.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "test_GIVEN_Not_Nil_Request_WHEN_Retrieve_Data_THEN_Result_Is_Correct()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "27D82B3F-824A-4F9B-A823-086770E6315F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Reciplease/Model/Search/SearchService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "retrieveRecipes(ingredients:callBack:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "27D82B3F-824A-4F9B-A823-086770E6315F - 615076406322f4f2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Reciplease.SearchResponse, Alamofire.AFError&gt;) -&gt; () in Reciplease.SearchService.retrieveRecipes(ingredients: Swift.Array&lt;Swift.String&gt;, callBack: (Swift.Optional&lt;Swift.Array&lt;Reciplease.Recipe&gt;&gt;, Swift.Optional&lt;Reciplease.NetworkError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Reciplease"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/damien/Documents/OpenClassrooms/iOS/Dev_iOS_2022/Projet_10_Creez_l_application_Reciplease_pour_de_bons_petits_plats/Reciplease/Reciplease/Model/Search/SearchService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "516">
+               </Location>
+               <Location
+                  uuid = "27D82B3F-824A-4F9B-A823-086770E6315F - 29d8cd01853e23d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Reciplease.Hit) -&gt; Reciplease.Recipe in closure #1 (Alamofire.DataResponse&lt;Reciplease.SearchResponse, Alamofire.AFError&gt;) -&gt; () in Reciplease.SearchService.retrieveRecipes(ingredients: Swift.Array&lt;Swift.String&gt;, callBack: (Swift.Optional&lt;Swift.Array&lt;Reciplease.Recipe&gt;&gt;, Swift.Optional&lt;Reciplease.NetworkError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Reciplease"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/damien/Documents/OpenClassrooms/iOS/Dev_iOS_2022/Projet_10_Creez_l_application_Reciplease_pour_de_bons_petits_plats/Reciplease/Reciplease/Model/Search/SearchService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
