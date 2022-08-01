@@ -41,7 +41,9 @@ class SearchServiceTestCase: XCTestCase {
             do {
                 // THEN_Result_Is_Correct
                 XCTAssertNil(error)
-                XCTAssertEqual(recipes, expectedResponse.hits.map { hit in hit.recipe })
+                for(index, recipe) in recipes!.enumerated() {
+                    XCTAssertTrue(recipe == expectedResponse.hits[index].recipe)
+                }
             }
         })
     

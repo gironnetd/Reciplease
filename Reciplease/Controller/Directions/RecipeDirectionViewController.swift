@@ -8,7 +8,7 @@
 import UIKit
 import WebKit
 
-class RecipeDescriptionViewController: UIViewController {
+class RecipeDirectionViewController: UIViewController {
 
     @IBOutlet private weak var webView: WKWebView!
     @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
@@ -22,7 +22,7 @@ class RecipeDescriptionViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        if var recipe = recipe {
+        if let recipe = recipe {
             if !recipe.url.contains("https") {
                 recipe.url = recipe.url.replacingOccurrences(of: "http", with: "https")
             }
@@ -35,7 +35,7 @@ class RecipeDescriptionViewController: UIViewController {
     }
 }
 
-extension RecipeDescriptionViewController: WKNavigationDelegate {
+extension RecipeDirectionViewController: WKNavigationDelegate {
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         activityIndicator.stopAnimating()
     }

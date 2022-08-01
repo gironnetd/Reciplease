@@ -16,8 +16,8 @@ class SearchService {
     private init(){}
     
     var sessionManager: Session = {
-      let configuration = URLSessionConfiguration.af.default
-      return Session(configuration: configuration)
+        let configuration = URLSessionConfiguration.af.default
+        return Session(configuration: configuration)
     }()
     
     public init(sessionManager: Session) {
@@ -35,11 +35,11 @@ class SearchService {
         apiKey(with: "app_key")
     }()
     
-    private func apiKey(with keyName: String) -> Parameter {
+    private func apiKey(with key: String) -> Parameter {
         let filePath = Bundle.main.path(forResource: "ApiKeys", ofType: "plist")
         let apiKeys = NSDictionary(contentsOfFile:filePath!)
-        let value = apiKeys?.object(forKey: keyName) as! String
-        return Parameter(key: keyName, value: value, description: "")
+        let value = apiKeys?.object(forKey: key) as! String
+        return Parameter(key: key, value: value, description: "")
     }
     
     public func apiKeyValuesForTesting() -> [String] {
@@ -66,7 +66,6 @@ class SearchService {
                     if let response = response.response {
                         callBack(nil, NetworkError(rawValue: (code: response.statusCode, title: nil, message: nil)))
                     }
-                    
                 }
             }.resume()
     }
