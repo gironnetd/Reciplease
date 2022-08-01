@@ -41,7 +41,10 @@ class SearchServiceTestCase: XCTestCase {
             do {
                 // THEN_Result_Is_Correct
                 XCTAssertNil(error)
-                XCTAssertEqual(recipes, expectedResponse.hits.map { hit in hit.recipe })
+                for(index, recipe) in recipes!.enumerated() {
+                    self.compare(recipe: recipe, other: expectedResponse.hits[index].recipe)
+                    //XCTAssertTrue(recipe == expectedResponse.hits[index].recipe)
+                }
             }
         })
     
@@ -66,5 +69,16 @@ class SearchServiceTestCase: XCTestCase {
             }
         })
         wait(for: [requestExpectation], timeout: 20.0)
+    }
+    
+    private func compare(recipe: Recipe, other: Recipe) {
+        XCTAssertTrue(recipe.label == other.label)
+        XCTAssertTrue(recipe.calories == other.calories)
+        XCTAssertTrue(recipe.imageUrl == other.imageUrl)
+        XCTAssertTrue(recipe.url == other.url)
+        XCTAssertTrue(recipe.calories == other.calories)
+        XCTAssertTrue(recipe.totalWeight == other.totalWeight)
+        XCTAssertTrue(recipe.totalTime == other.totalTime)
+        recipe.ingredients.forEach { ingredient in other.ingredients.contains(ingredient)}
     }
 }
