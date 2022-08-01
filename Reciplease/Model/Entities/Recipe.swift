@@ -12,13 +12,7 @@ import CoreData
 
 @objc(Recipe)
 class Recipe: NSManagedObject, Codable {
-    static func == (lhs: Recipe, rhs: Recipe) -> Bool {
-        return  lhs.label == rhs.label && lhs.imageUrl == rhs.imageUrl
-        && lhs.recipeImage == rhs.recipeImage && lhs.url == rhs.url
-        && lhs.calories == rhs.calories && lhs.totalWeight == rhs.totalWeight
-        && lhs.totalTime == rhs.totalTime
-    }
-    
+
     public var recipeImage: Data?
     
     enum CodingKeys: String, CodingKey {
@@ -28,7 +22,7 @@ class Recipe: NSManagedObject, Codable {
     }
     
     required convenience init(from decoder: Decoder) throws {
-        let entity = NSEntityDescription.entity(forEntityName: "Recipe", in: RecipeController.managedObjectContext)
+        let entity = NSEntityDescription.entity(forEntityName: "Recipe", in: CoreDataStack.shared.managedObjectContext)
         self.init(entity: entity!, insertInto: nil)
         
         let container = try decoder.container(keyedBy: CodingKeys.self)

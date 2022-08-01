@@ -15,6 +15,10 @@ class FavoritesViewController: UIViewController {
     
     @IBOutlet weak var informationMessage: UILabel!
     
+    private lazy var favoriteService = FavoriteService(
+        managedObjectContext: CoreDataStack.shared.managedObjectContext,
+        coreDataStack: CoreDataStack.shared)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -28,7 +32,7 @@ class FavoritesViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        guard let recipes = RecipeController.shared.findAll() else {
+        guard let recipes = favoriteService.findAll() else {
             self.recipes = []
             informationMessage.isHidden = false
             self.tableView.reloadData()

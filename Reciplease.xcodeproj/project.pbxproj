@@ -15,7 +15,6 @@
 		6D2DA7CB2892898C0048EF2C /* NetworkErrorTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2DA7CA2892898C0048EF2C /* NetworkErrorTestCase.swift */; };
 		6D2DA7D028928A7A0048EF2C /* FakeHttpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2DA7CF28928A7A0048EF2C /* FakeHttpResponse.swift */; };
 		6D346AA02887F55B00FBFF9C /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D346A9F2887F55B00FBFF9C /* SearchTableViewCell.swift */; };
-		6D3892A128954BA800097669 /* RecipeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3892A028954BA800097669 /* RecipeController.swift */; };
 		6D47C749288ABA0F003E96AD /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D47C748288ABA0F003E96AD /* GradientView.swift */; };
 		6D4DBEAE288B0DB300823C8C /* RecipeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4DBEAD288B0DB300823C8C /* RecipeDetailViewController.swift */; };
 		6D551D94288989F500E220D6 /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D551D93288989F500E220D6 /* SearchService.swift */; };
@@ -45,6 +44,10 @@
 		6DC128492886CEBC00BB115C /* Aristotelica-Text-Light-trial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6DC128482886CEBC00BB115C /* Aristotelica-Text-Light-trial.ttf */; };
 		6DC30E6C288870B10060CE28 /* RecipesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC30E6B288870B10060CE28 /* RecipesTableViewController.swift */; };
 		6DC30E7928887B930060CE28 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC30E7828887B930060CE28 /* SearchResponse.swift */; };
+		6DF0F1E92898489300752E3F /* FavoriteServiceTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF0F1E82898489300752E3F /* FavoriteServiceTestCase.swift */; };
+		6DF0F1F128984BB600752E3F /* TestingCoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF0F1F028984BB600752E3F /* TestingCoreDataStack.swift */; };
+		6DF0F1F7289854C700752E3F /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF0F1F6289854C700752E3F /* CoreDataStack.swift */; };
+		6DF0F1FC289854FC00752E3F /* FavoriteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF0F1FB289854FC00752E3F /* FavoriteService.swift */; };
 		6DF9CBE4288718B900244129 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF9CBE3288718B900244129 /* SearchViewController.swift */; };
 		6DF9CBE928871D0D00244129 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF9CBE828871D0D00244129 /* MainViewController.swift */; };
 		6FD6090F084193497645286F /* Pods_RecipleaseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 651B016461D232F20FD49492 /* Pods_RecipleaseTests.framework */; };
@@ -72,7 +75,6 @@
 		6D2DA7CA2892898C0048EF2C /* NetworkErrorTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrorTestCase.swift; sourceTree = "<group>"; };
 		6D2DA7CF28928A7A0048EF2C /* FakeHttpResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeHttpResponse.swift; sourceTree = "<group>"; };
 		6D346A9F2887F55B00FBFF9C /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
-		6D3892A028954BA800097669 /* RecipeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeController.swift; sourceTree = "<group>"; };
 		6D47C748288ABA0F003E96AD /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		6D4DBEAD288B0DB300823C8C /* RecipeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailViewController.swift; sourceTree = "<group>"; };
 		6D551D93288989F500E220D6 /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
@@ -106,6 +108,10 @@
 		6DC128482886CEBC00BB115C /* Aristotelica-Text-Light-trial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Aristotelica-Text-Light-trial.ttf"; sourceTree = "<group>"; };
 		6DC30E6B288870B10060CE28 /* RecipesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesTableViewController.swift; sourceTree = "<group>"; };
 		6DC30E7828887B930060CE28 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
+		6DF0F1E82898489300752E3F /* FavoriteServiceTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteServiceTestCase.swift; sourceTree = "<group>"; };
+		6DF0F1F028984BB600752E3F /* TestingCoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingCoreDataStack.swift; sourceTree = "<group>"; };
+		6DF0F1F6289854C700752E3F /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		6DF0F1FB289854FC00752E3F /* FavoriteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteService.swift; sourceTree = "<group>"; };
 		6DF9CBE3288718B900244129 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		6DF9CBE828871D0D00244129 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		85E4D029CC70DAD97033BEB3 /* Pods-Reciplease.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reciplease.release.xcconfig"; path = "Target Support Files/Pods-Reciplease/Pods-Reciplease.release.xcconfig"; sourceTree = "<group>"; };
@@ -270,6 +276,8 @@
 		6D9BD8AC2885BA1300539836 /* RecipleaseTests */ = {
 			isa = PBXGroup;
 			children = (
+				6DF0F1F028984BB600752E3F /* TestingCoreDataStack.swift */,
+				6DF0F1E82898489300752E3F /* FavoriteServiceTestCase.swift */,
 				6DACE94C2891903000AEF75E /* SearchServiceTestCase.swift */,
 				6DACE96328919B9B00AEF75E /* FakeSearchResponse.swift */,
 				6DACE95F28919B3800AEF75E /* SearchResponse.json */,
@@ -325,6 +333,14 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
+		6DF0F1FA289854D400752E3F /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				6DF0F1FB289854FC00752E3F /* FavoriteService.swift */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
 		6DF9CBDB288717A700244129 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -364,13 +380,14 @@
 		6DF9CBDE288717E500244129 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6DF0F1FA289854D400752E3F /* Favorites */,
 				6D7A613C2894106300E73A41 /* Entities */,
 				6DC30E7728887B7E0060CE28 /* Search */,
 				6D804F212892E791007CF936 /* Util */,
 				6D1A72702889A4360049C4DF /* Parameter.swift */,
 				6D2DA7C6289270C90048EF2C /* NetworkError.swift */,
-				6D3892A028954BA800097669 /* RecipeController.swift */,
 				6D9BD89C2885BA0600539836 /* Reciplease.xcdatamodeld */,
+				6DF0F1F6289854C700752E3F /* CoreDataStack.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -590,13 +607,14 @@
 				6DF9CBE928871D0D00244129 /* MainViewController.swift in Sources */,
 				6D4DBEAE288B0DB300823C8C /* RecipeDetailViewController.swift in Sources */,
 				6DC30E7928887B930060CE28 /* SearchResponse.swift in Sources */,
-				6D3892A128954BA800097669 /* RecipeController.swift in Sources */,
 				6D9BD8942885BA0600539836 /* AppDelegate.swift in Sources */,
 				6DB1AD7D288EA37F004FB3EC /* RecipeDetailTableViewCell.swift in Sources */,
 				6D804F102892DA7C007CF936 /* Informations.swift in Sources */,
+				6DF0F1F7289854C700752E3F /* CoreDataStack.swift in Sources */,
 				6D69362A288EF412008CFF84 /* RecipeDirectionViewController.swift in Sources */,
 				6D9BD8962885BA0600539836 /* SceneDelegate.swift in Sources */,
 				6D1A72712889A4360049C4DF /* Parameter.swift in Sources */,
+				6DF0F1FC289854FC00752E3F /* FavoriteService.swift in Sources */,
 				6D2DA7C7289270C90048EF2C /* NetworkError.swift in Sources */,
 				6D346AA02887F55B00FBFF9C /* SearchTableViewCell.swift in Sources */,
 				6D7A612D289408AB00E73A41 /* FavoritesViewController.swift in Sources */,
@@ -609,9 +627,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DF0F1F128984BB600752E3F /* TestingCoreDataStack.swift in Sources */,
 				6DACE94D2891903000AEF75E /* SearchServiceTestCase.swift in Sources */,
 				6DACE96428919B9B00AEF75E /* FakeSearchResponse.swift in Sources */,
 				6D2DA7CB2892898C0048EF2C /* NetworkErrorTestCase.swift in Sources */,
+				6DF0F1E92898489300752E3F /* FavoriteServiceTestCase.swift in Sources */,
 				6D2DA7D028928A7A0048EF2C /* FakeHttpResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

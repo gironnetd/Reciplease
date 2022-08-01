@@ -19,6 +19,10 @@ class RecipeDetailViewController: UIViewController {
     @IBOutlet weak var isFavorites: UIBarButtonItem!
     private let segueIdentifier = "RecipeDirectionSegue"
     
+    private lazy var favoriteService = FavoriteService(
+        managedObjectContext: CoreDataStack.shared.managedObjectContext,
+        coreDataStack: CoreDataStack.shared)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         ingredientLines.delegate = self
@@ -32,7 +36,7 @@ class RecipeDetailViewController: UIViewController {
             let request: NSFetchRequest<Recipe> = Recipe.fetchRequest()
             request.predicate = NSPredicate(format: "label LIKE %@", recipe.label)
 
-            let objects = try? RecipeController.managedObjectContext.fetch(request)
+            let objects = try? CoreDataStack.shared.managedObjectContext.fetch(request)
             if let result = objects, !result.isEmpty {
                 toggleFavoritesBarButtonItem(isFavorites: true)
             } else {
@@ -56,12 +60,12 @@ class RecipeDetailViewController: UIViewController {
     @IBAction func saveOrDeleteToFavorites(_ sender: UIBarButtonItem) {
         if sender.image == UIImage(systemName: "star") {
             if let recipe = recipe {
-                RecipeController.shared.save(recipe: recipe)
+                favoriteService.save(recipe: recipe)
                 toggleFavoritesBarButtonItem(isFavorites: true)
             }
         } else if sender.image == UIImage(systemName: "star.fill") {
             if let recipe = recipe {
-                RecipeController.shared.delete(recipe: recipe)
+                favoriteService.delete(recipe: recipe)
                 toggleFavoritesBarButtonItem(isFavorites: false)
             }
         }
