@@ -13,8 +13,6 @@ import CoreData
 @objc(Recipe)
 class Recipe: NSManagedObject, Codable {
 
-    public var recipeImage: Data?
-    
     enum CodingKeys: String, CodingKey {
         case label, recipeImage, url, ingredients,
          calories, totalWeight,totalTime
@@ -54,6 +52,7 @@ extension Recipe {
    
     @NSManaged public var label: String
     @NSManaged public var imageUrl: String
+    @NSManaged public var recipeImage: Data?
     @NSManaged public var url: String
     @NSManaged public var ingredients: Set<Ingredient>
     @NSManaged public var calories, totalWeight: Double
