@@ -44,8 +44,10 @@ import UIKit
     
     public func populateHeaderView() {
         updateTitle()
-        if let recipe = recipe, let recipeImage = recipe.recipeImage {
-            self.recipeImage.image = UIImage(data: recipeImage)
+        if let recipe = recipe {
+            if let recipeImage = recipe.recipeImage {
+                self.recipeImage.image = UIImage(data: recipeImage)
+            }
             informations.recipe = recipe
             informations.populateInformations()
         }

@@ -8,6 +8,7 @@
         <attribute name="calories" attributeType="Double" usesScalarValueType="YES"/>
         <attribute name="imageUrl" attributeType="String"/>
         <attribute name="label" attributeType="String"/>
+        <attribute name="recipeImage" optional="YES" attributeType="Binary"/>
         <attribute name="totalTime" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="totalWeight" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="url" attributeType="String"/>
@@ -15,6 +16,6 @@
     </entity>
     <elements>
         <element name="Ingredient" positionX="-54" positionY="0" width="128" height="73"/>
-        <element name="Recipe" positionX="-63" positionY="-18" width="128" height="148"/>
+        <element name="Recipe" positionX="-63" positionY="-18" width="128" height="163"/>
     </elements>
 </model>

@@ -85,17 +85,10 @@ extension FavoritesViewController: UITableViewDataSource {
         
         cell.recipe = recipe
         cell.populateTableViewCell()
-        cell.recipeImage.kf.setImage(with: URL(string: recipe.imageUrl), completionHandler: { result in
-            switch result {
-            case .success(let image):
-                if let image = image.image.pngData() {
-                    self.recipes[indexPath.row].recipeImage = image
-                }
-            case .failure(let error):
-                print(error)
-            }
-        })
-                
+        
+        if let recipeImage = recipe.recipeImage {
+            cell.recipeImage.image = UIImage(data: recipeImage)
+        }
         return cell
     }
 }

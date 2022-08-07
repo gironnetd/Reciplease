@@ -42,8 +42,8 @@ class RecipesTableViewController: UITableViewController {
                 if let image = image.image.pngData() {
                     self.recipes[indexPath.row].recipeImage = image
                 }
-            case .failure(let error):
-                print(error)
+            case .failure:
+                break
             }
         })
                 
