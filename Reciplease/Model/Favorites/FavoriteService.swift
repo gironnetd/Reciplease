@@ -26,6 +26,7 @@ extension FavoriteService {
         let savedRecipe = Recipe(context: CoreDataStack.shared.managedObjectContext)
         savedRecipe.label = recipe.label
         savedRecipe.imageUrl = recipe.imageUrl
+        savedRecipe.recipeImage = recipe.recipeImage
         savedRecipe.url = recipe.url
         savedRecipe.totalTime = recipe.totalTime
         savedRecipe.totalWeight = recipe.totalWeight

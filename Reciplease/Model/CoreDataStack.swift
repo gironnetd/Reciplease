@@ -20,7 +20,7 @@ class CoreDataStack {
     
     public var persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: CoreDataStack.modelName, managedObjectModel: CoreDataStack.model)
-        print(container.persistentStoreDescriptions.first?.url as Any)
+        //print(container.persistentStoreDescriptions.first?.url as Any)
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 fatalError("Unresolved error \(error), \(error.userInfo)")
